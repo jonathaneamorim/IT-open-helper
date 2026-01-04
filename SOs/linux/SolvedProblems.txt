@@ -1,0 +1,23 @@
+1. Problema com o XAMPP e o arquivo libcrypt.so.1
+O erro que você está enfrentando no XAMPP no Fedora 42 está relacionado à falta da biblioteca libcrypt.so.1, que é necessária para o funcionamento do ProFTPD, um dos componentes do XAMPP. Vou te guiar passo a passo para resolver esse problema.
+
+Passo 1: Verificar se a biblioteca libcrypt.so.1 está instalada
+Primeiro, verifique se a biblioteca libcrypt.so.1 está instalada no seu sistema. Execute o seguinte comando no terminal:
+
+ldconfig -p | grep libcrypt.so.1
+
+Se o comando não retornar nada, significa que a biblioteca não está instalada.
+
+Passo 2: Instalar a biblioteca libcrypt.so.1
+No Fedora, a biblioteca libcrypt faz parte do pacote libxcrypt-compat. Você pode instalá-la usando o gerenciador de pacotes dnf:
+
+sudo dnf install libxcrypt-compat
+
+Passo 3: Verificar novamente a biblioteca
+Após a instalação, verifique novamente se a biblioteca está disponível:
+
+ldconfig -p | grep libcrypt.so.1
+
+Agora, você deverá ver uma saída semelhante a:
+
+libcrypt.so.1 (libc6,x86-64) => /lib64/libcrypt.so.1

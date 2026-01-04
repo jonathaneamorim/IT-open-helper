@@ -1,0 +1,6 @@
+Aspas (” “): Pesquisa uma frase exata
+OR: Pesquisa várias palavras ou frases
+Hífen (-): Exclui palavras da pesquisa
+Asterisco ()*: Pesquisa palavras com diferentes variações
+Dois pontos (..): Pesquisa um intervalo numérico
+Símbolos de moeda (R$, $, €): Pesquisa preços em uma moeda específica
