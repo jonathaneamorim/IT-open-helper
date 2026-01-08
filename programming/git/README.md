@@ -1,4 +1,6 @@
-------------- Básico -------------
+# GIT HELPER
+
+## Básico 
 - O que é controle de versão e como ele funciona?
 	- Controle de versão, como o próprio nome já diz, tem a finalidade de controlar a versões de um projeto ou código, armazenando versões sólidas do projeto e permitindo o trabalho simultâneo entre os programadores e sincronização de alterações quando necessário.
 	
@@ -50,3 +52,54 @@
 - O que é rebase e como usá-lo?
 	- O GIT REBASE assim como o GIT merge servem para mesclar alterações de um repositório GIT, mas de maneira diferente. O GIT REBASE reescreve o histórico de commits, o sobrepondo a outro.
 	
+# GitTutorial
+Guia completo sobre o sistema de controle de versão Git e plataformas de hospedagem como GitHub, GitLab e Bitbucket. Aprenda a criar repositórios, fazer commits, gerenciar branches, merges e resolver conflitos. Ideal para iniciantes e desenvolvedores que querem aprimorar seus conhecimentos em versionamento e colaboração.
+
+
+## Principais tópicos
+
+### Basico 
+- Controle de versão | Teoria | Criador | Motivo
+- Estados de arquivos
+    - MODIFIED | STAGED | COMMITED
+- GIT INIT | GIT REMOTE | GIT CONFIG | GIT IGNORE | GIT CLONE
+    - Flags 
+    - Metodos de clonagem HTTP/SSH
+- GIT LOG | GIT STATUS | GIT DIFF | GIT SHOW
+    - Flags de Comandos
+    - Método ADOG
+- GIT ADD | GIT COMMIT | GIT RM --CACHED
+    - Adicionar e remover arquivos da area de STAGED
+    - GIT COMMIT --AMEND
+- GIT PUSH
+    - origins
+### Intermediário 
+- GIT PULL 
+    - Flags
+- GIT BRANCH 
+    - Explicar bem a parte de ramificação 
+- GIT CHECKOUT
+    - Flags
+    - Git checkout --
+    - Git checkout -b
+- GIT MERGE
+    - Flags
+- GIT REBASE 
+    - Explicar bem essa parte pois é bem confusa
+### Avançado
+- GIT STASH
+    - GIT STASH POP
+    - Flags
+- Reescrever historico de commits com o Rebase
+- GIT RESET
+- MERGE CONFLICT
+- GIT 
+
+### Conteudo extra
+- TAGS
+- GIT FLOW 
+- Padrão de commit
+- Fork
+- Code Review
+- Source Control
+- VIM
