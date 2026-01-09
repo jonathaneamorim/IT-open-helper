@@ -99,3 +99,6 @@ Categories=Development;IDE;
 Terminal=false
 StartupWMClass=nome-da-janela
 StartupNotify=true
+```
+
+[voltar](/SOs/README.md)

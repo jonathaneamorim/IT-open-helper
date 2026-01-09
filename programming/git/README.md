@@ -24,7 +24,7 @@
 		- Para descartar as modificações relizadas em um arquivo "modified" basta utilizar o comando GIT CHECKOUT -- [filename]
 			- DETALHE IMPORTANTE: Esse comando funcionará somente se o arquivo não tiver sido alocando no ambiente de preparação (staging), caso ele estiver, basta removê-lo com o o camando GIT RESTORE --STAGED [filename], após isso remover as alterações. Caso ele tenha sofrido um commit já não será mais possível remover as alterações.
 
-------------- Médio -------------
+## Médio
 - O que é um repositório remoto?
 	- Um repositório remoto trata-se de um repositório GIT em um servidor na nuvem como (github, bitbucket, GitLab etc). Geralmente esse repositório é utilizado como uma versão centralizada para todos os integrantes do projeto, inserindo, clonando ou atualizando informações.
 

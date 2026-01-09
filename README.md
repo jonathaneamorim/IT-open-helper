@@ -1,0 +1,22 @@
+# IT Open Helper
+Este é um reposítorio que tem o objetivo de centralizar, organizar e guardar minhas informações a respeito de diversos campos da tecnologia
+- Programação - [clique aqui](/programming/README.md)
+    - Banco de dados
+    - Linguagens de programação
+    - Docker
+    - Git 
+    - etc
+- Sistemas operacionais - [clique aqui](/SOs/README.md)
+    - Linux
+    - Windows
+    - MACos
+    - Formatação
+    - Terminais
+    - etc
+- Navegadores - [clique aqui](/searchNavigation/README.md)
+    - Estratégias
+    - Filtros
+    - Pesquisa
+    - Dicas
+    - Extensões
+    - etc
