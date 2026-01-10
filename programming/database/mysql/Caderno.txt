@@ -1,0 +1,65 @@
+select * from HR.COUNTRIES;
+
+select * from HR.EMPLOYEES;
+
+
+select FIRST_NAME, DEPARTMENT_NAME 
+from HR.EMPLOYEES E INNER JOIN HR.DEPARTMENTS D 
+ON E.DEPARTMENT_ID = D.DEPARTMENT_ID;
+
+
+<!-- Listar o maior e o menor salário da empresa --> 
+select MAX(Salary), MIN(Salary)
+from HR.EMPLOYEES;
+
+<!-- O total da folha de pagamento e a quantidade de funcionarios -->
+select MAX(Salary), MIN(Salary), TRUNC(AVG(Salary), 2), SUM(Salary), COUNT(*)
+from HR.EMPLOYEES;
+
+<!-- Listar o total de funcionarios da empresa e o total de funcionarios comissionados --> 
+select 
+    COUNT(EMPLOYEE_ID) as TOTAL_FUNCIONARIOS, 
+    COUNT(COMMISSION_PCT) COMISSIONADOS, 
+    TRUNC(COUNT(COMMISSION_PCT)/COUNT(EMPLOYEE_ID)*100, 2) "PERCENTUAL DE COMISSIONADOS" 
+from HR.EMPLOYEES;
+
+<!-- Listar o maior e o menor salaŕio por departamento. Apresentar no resultado os maiores e menores salarios e o ID do departamento -->
+select DEPARTMENT_ID, MAX(SALARY) MAIOR, MIN(SALARY) menor
+FROM HR.EMPLOYEES
+GROUP BY DEPARTMENT_ID;
+
+<!-- Mostrar o nome do funcionario que tem o maior salario dentre todos na empresa -->
+SELECT FIRST_NAME || ' ' || LAST_NAME AS NOME_COMPLETO, SALARY SALARIO
+FROM HR.EMPLOYEES
+WHERE SALARY = (SELECT MAX(SALARY) FROM HR.EMPLOYEES);
+
+<!-- MOSTRAR O NOME DOS FUNCIONARIO QUE GANHAM O MENOR E O MAIOR SALARIO -->
+SELECT FIRST_NAME || ' ' || LAST_NAME AS NOME_COMPLETO, SALARY salario
+FROM HR.EMPLOYEES
+WHERE 
+    SALARY = (SELECT MAX(SALARY) FROM HR.EMPLOYEES) OR
+    SALARY = (SELECT MIN(SALARY) FROM HR.EMPLOYEES);
+
+<!-- HAVING É O FILTRO DO GROUP BY (USAR HAVING SOMENTE SE HOUVER UM GROUP BY) -->
+<!-- Listar o maior salario em cada departamento. Mostrar no resultado apenas os departamentos que tenham maior salário superior a 10000 -->
+SELECT DEPARTMENT_ID, MAX(SALARY) MAIOR
+FROM HR.EMPLOYEES
+GROUP BY DEPARTMENT_ID
+HAVING MAX(SALARY) > 10000
+ORDER BY DEPARTMENT_ID;
+
+<!-- Usar o any e o all quando houver subconsultas -->
+<!-- Utilizar o ANY ou ALL somente quando a subconsulta resultar em multiplas linhas -->
+
+<!-- Mostrar  Media dos salarios  -->
+
+
+<!-- Mostrar os funcionarios que tenham salário maior ou igual à qualquer media de salários dos departamentos da empresa -->
+SELECT * 
+    FROM HR.EMPLOYEES
+    WHERE SALARY >= ANY (
+                        SELECT 
+                            AVG(SALARY) 
+                            FROM HR.EMPLOYEES 
+                            GROUP BY DEPARTMENT_ID
+);
