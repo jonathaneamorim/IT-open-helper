@@ -1,0 +1,183 @@
+// Variáveis de cores
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$accent-color: #e74c3c;
+$background-color: #f4f4f4;
+$text-color: #333;
+$font-stack: 'Arial', sans-serif;
+
+// Mixins
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($x, $y, $blur, $color) {
+  -webkit-box-shadow: $x $y $blur $color;
+  -moz-box-shadow: $x $y $blur $color;
+  box-shadow: $x $y $blur $color;
+}
+
+// Estilos gerais
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+// Cabeçalho
+header {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5em;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
+
+// Navegação
+nav {
+  background-color: $secondary-color;
+  text-align: center;
+  padding: 10px 0;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $accent-color;
+    }
+  }
+}
+
+// Seção principal
+main {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $primary-color;
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      @include box-shadow(0, 6px, 12px, rgba(0, 0, 0, 0.1));
+    }
+
+    h3 {
+      color: $primary-color;
+      font-size: 1.5em;
+    }
+
+    p {
+      font-size: 1em;
+      color: $text-color;
+    }
+  }
+}
+
+// Rodapé
+footer {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9em;
+
+  a {
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Responsividade
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px;
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  nav {
+    a {
+      padding: 8px 16px;
+    }
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+
+  nav {
+    a {
+      padding: 6px 12px;
+    }
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.7em;
+  }
+}

@@ -1,0 +1,131 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+header p {
+  font-size: 1.2em;
+}
+
+nav {
+  background-color: #2ecc71;
+  text-align: center;
+  padding: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+nav a:hover {
+  background-color: #e74c3c;
+}
+
+main {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+main h2 {
+  color: #3498db;
+  font-size: 2em;
+}
+main p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+main .card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+main .card:hover {
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+main .card h3 {
+  color: #3498db;
+  font-size: 1.5em;
+}
+main .card p {
+  font-size: 1em;
+  color: #333;
+}
+
+footer {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9em;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #e74c3c;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  nav a {
+    padding: 8px 16px;
+  }
+  main {
+    padding: 15px;
+  }
+  .card {
+    padding: 15px;
+  }
+  footer {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  header h1 {
+    font-size: 1.8em;
+  }
+  nav a {
+    padding: 6px 12px;
+  }
+  main {
+    padding: 10px;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+}
