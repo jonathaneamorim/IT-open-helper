@@ -1,5 +1,6 @@
 # Ideias para futuros projetos
 
+- Controle de anotações
 - Controle de dividas da casa
 - Controle de lista de compras
 - Organizador de RPG
